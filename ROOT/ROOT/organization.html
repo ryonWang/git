@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+
+<div id="header" ></div>
+
+
+<!-- header end -->
+    <div class="inner-banner">
+        
+    <img src="upload/cimg26.jpg" alt="公司概况" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg66.png" alt="" /></h2>
+    <div class="graybg pb70">
+  <div class="web">
+    <div class="second-menu"><a id="aparentid22" href="#">公司介绍</a><a id="aparentid23" href="#">创新技术</a><a id="aparentid24" href="#">企业文化</a></div>
+    <div class="third-menu02" style="display:none;"><a id="a25" href="#">公司简介</a> | <a id="a26" href="#">组织架构</a> | <a id="a27" href="#">发展历程</a> | <a id="a28" href="Company/Profile/Qualification.html">公司资质</a> | <a id="a29" href="#">办公环境</a> | </div>
+    <div class="crumbs-box clearfix">
+      <span class="current">组织架构</span>
+      <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="#">公司概况</a> &gt; <a href="#">公司介绍</a> &gt; <a href="javascript:;" class="on">组织架构</a></div>
+    </div>
+    <div class="single-cont">
+      <h2 class="company-name">
+ 
+ 深圳市华威世纪科技股份有限公司组织结构图</h2><p class="tac-pic pt20"> <img src="upload/ueditor/image/20161122/6361543282440143154878445.jpg" title="架构表.jpg" alt="架构表.jpg"></p>
+    </div>
+  </div>
+</div>
+
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+
+
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <script>
+        $(function () {
+            $("#aparentid22").addClass("cur");
+            $("#a26").addClass("cur");
+            var shtml = $(".third-menu02").html();
+            shtml = shtml.substring(0, shtml.length - 2);
+            $(".third-menu02").html(shtml);
+            $(".third-menu02").show();
+        })
+    </script>
+</body>
+</html>
+

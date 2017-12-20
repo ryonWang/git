@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+<div id="header" ></div>
+<!-- header end -->
+    <div class="inner-banner">
+        
+    <img src="upload/cimg26.jpg" alt="公司概况" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg66.png" alt="" /></h2>
+    <div class="graybg pb70">
+  <div class="web">
+    <div class="second-menu"><a id="aparentid22" href="#">公司介绍</a><a id="aparentid23" href="#">创新技术</a><a id="aparentid24" href="#">企业文化</a></div>
+    <div class="third-menu03" style="display:none;"><a id="a46" href="#">智能物联网技术</a> | <a id="a47" href="#">可信计算技术</a> | <a id="a48" href="#">互联网+大数据技术</a> | <a id="a49" href="#">事故预警预报技术</a> | <a id="a50" href="#">智能视频分析技术</a> | <a id="a51" href="#">跨平台数据对接与兼容层技术</a> | </div>
+    <div class="crumbs-box clearfix">
+      <span class="current">智能物联网技术</span>
+      <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="#">公司概况</a> &gt; <a href="#">创新技术</a> &gt; <a href="javascript:;" class="on">智能物联网技术</a></div>
+    </div>
+    <div class="single-cont">
+      <div class="technology-box">
+        <h2 class="company-name">
+ 智能物联网技术</h2><p class="tac-pic pb32"> <img src="upload/ueditor/image/20160827/6360790605000483129758533.jpg" alt="cimg48.jpg" title="cimg48.jpg"></p><p class="technology-text ti2">
+ 物联网是通过传感设备按照约定的协议，把各种网络连接起来，进行信息交换和通信，以实现智能化识别、定位、跟踪、监控和管理的一种网络。在打造这个连接物体与物体的信息网络时，公司利用RFID、二维码、GPS、摄像头、传感器、传感器网络等技术进行感知、捕获、测量，随时随地对 物体进行信息采集和获取；同时通过各种通信网络与互联网的融合，将物体接入信息网络，随时随地进行可靠的信息交互和共享；然后利用云计算、模糊识别等各种智能计算技术，对海量的跨地域、跨行业、跨部门的数据和信息进行分析处理，提升对物理世界、经济社会各种活动和变化的洞察力，实现智能化的决策和控制。</p>
+      </div>
+      <div class="orso-case">
+        <h2 class="orso-casetitle"><span>应用案例</span></h2>
+        <div class="orso-casebox">
+          <ul class="orso-caselist clearfix">
+           
+              <li><a href="javascript:;"><img src="upload/Company/Profile/cimg22.jpg" alt="邢台智慧安监的中标确认书 " /><span class="case-name">邢台智慧安监的中标确认书 </span></a></li>
+              
+              <li><a href="javascript:;"><img src="upload/Company/Profile/cimg21.jpg" alt="邢台智慧安监的中标确认书 " /><span class="case-name">邢台智慧安监的中标确认书 </span></a></li>
+              
+              <li><a href="javascript:;"><img src="upload/Company/Profile/cimg20.jpg" alt="邢台智慧安监的中标确认书 " /><span class="case-name">邢台智慧安监的中标确认书 </span></a></li>
+              
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <script type="text/javascript" src="ajax/Product.ashx"></script>
+    <script>
+
+        $(function () {
+            $("#aparentid23").addClass("cur");
+            $("#a46").addClass("cur");
+            var shtml = $(".third-menu03").html();
+            shtml = shtml.substring(0, shtml.length - 2);
+            $(".third-menu03").html(shtml);
+            $(".third-menu03 a:last").addClass("sbsj");
+            $(".third-menu03").show();
+            if ($(".orso-caselist li").length == 0) {
+                $(".orso-case").hide();
+            }
+        })
+    </script>
+	
+</body>	
+</html>
+

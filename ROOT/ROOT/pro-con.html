@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+
+<div id="header" ></div>
+
+
+<!-- header end -->
+    <div class="pro-detailname">
+        <h2><span>应急救援指挥系统</span> | <a href="javascript:history.back(-1)">返回</a></h2>
+    </div>
+    <div class="web">
+        <!--放大镜-->
+        <div class="magnifier clearfix">
+            <div class="fl detail-brief">
+                <h3 class="pro-name">应急救援指挥系统</h3>
+                <div class="detail-text">
+                    <!--以下是自由编辑内容-->
+                    <p><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系统能够采集、分析和处理应急救援信息，为应急救援指挥机构协调指挥事故救援工作提供参考依据。系统能够满足全天候、快速反应安全生产事故信息处理和抢险救灾调度指挥的需要，使其具备事故快报功能，并以地理信息系统和视频会议系统为平台，以资源分析为核心，快速进行事故受理，与救灾资源和社会救助联动，及时、有效地进行抢险救灾调度指挥。​</span></p>
+                    <!--以下是自由编辑内容 over-->
+                </div>
+                <div class="smallimg">
+                    <ul class="clearfix">
+                        
+                        <li>
+                            <img src="upload/Product/Software/Safety/2-2.jpg" rel="upload/Product/Software/Safety/2-2.jpg"></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="fr clearfix">
+                <div class="bigimg-cont">
+                    <img src="" jqimg="" alt="" />
+                </div>
+            </div>
+        </div>
+        <!--放大镜 over-->
+        <div class="pro-detailcont">
+            <div class="hide-detail">
+                <h3 class="pro-detailtitle">产品概述</h3>
+                <div class="hide-cont"></div>
+            </div>
+            <div class="hide-detail">
+                <h3 class="pro-detailtitle">系统架构</h3>
+                <div class="hide-cont"></div>
+            </div>
+            <div class="hide-detail">
+                <h3 class="pro-detailtitle">系统界面</h3>
+                <!--system-banner-->
+                <div class="system-banner">
+                    <div class="system-bannerbox">
+                        <ul class="clearfix">
+                        </ul>
+                    </div>
+                    <a href="javascript:;" class="system-prev"></a>
+                    <a href="javascript:;" class="system-next"></a>
+                    <div class="system-btn"></div>
+                </div>
+                <!--system-banner over-->
+            </div>
+            <div class="hide-detail">
+                <h3 class="pro-detailtitle mb24">系统功能</h3>
+                <div class="hide-cont"></div>
+           </div>
+            <div class="pro-back"><a href="javascript:history.back(-1)">返回</a></div>
+            <h3 class="pro-detailtitle mb24 pro-detailtitle-relate">相关产品</h3>
+            <div class="orso-pro">
+                <div class="orso-probox">
+                    <ul class="orso-prolist clearfix">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <!--产品详情-->
+<script src="webjs/jquery.jqzoom.min.js"></script>
+<script src="webjs/jquery.cycle.all.js"></script>
+<script src="webjs/myscroll.js"></script>
+<script>
+    var SystemView = '[{"msbox":"upload/Product/Software/Safety/8.png","title":"请填写标题","desc":"请填写简介"},{"msbox":"upload/Product/Software/Safety/9.png","title":"请填写标题","desc":"请填写简介"}]';
+    var relateproduct = "";
+    $(function () {
+        var photolist;
+        if(SystemView!=""&&SystemView!="null"){
+            photolist = JSON.parse(SystemView);
+        }
+        
+        if (photolist!=undefined&&photolist.length > 0) {
+            for (var i = 0; i < photolist.length; i++) {
+                var photo = photolist[i];
+                $(".system-bannerbox ul").append("<li><img src=\"" + photo.msbox.replace("minimg", "") + "\" rel=\"" + photo.msbox.replace("minimg", "") + "\"></li>");
+            }
+        }
+        // 放大镜
+        $(".bigimg-cont").jqueryzoom({
+            xzoom: 150,
+            yzoom: 150,
+            offset: 10,
+            position: "left",
+            preload: 1,
+            lens: 1
+        });
+
+        $('.smallimg').find('li').eq(0).addClass('cur');
+        $('.bigimg-cont').find('img').attr({
+            'src': $('.smallimg li:eq(0)').find('img').attr('rel'),
+            'jqimg': $('.smallimg li:eq(0)').find('img').attr('rel')
+        });
+
+        $('.smallimg').find('li').click(function () {
+            $(this).addClass('cur').siblings().removeClass('cur');
+            var img_rel = $(this).find('img').attr('rel');
+            $('.bigimg-cont').find('img').attr({
+                'src': img_rel,
+                'jqimg': img_rel
+            });
+        });
+
+        // banenr
+        $('.system-banner ul').cycle({
+            fx: 'fade',
+            speed: 600,
+            prev: '.system-prev',
+            next: '.system-next',
+            pager: '.system-btn'
+        });
+
+
+
+        Product.GetRelate3(relateproduct, function (res) {
+            $(".orso-prolist").html(res.value);
+            if ($(".orso-prolist li").length == 0) {
+                $(".pro-detailtitle-relate").hide();
+                $(".orso-pro").hide();
+            }
+            // 相关产品
+            $('.orso-pro').myscroll({
+                scrollbox: $('.orso-probox'),
+                number: "4",
+                auto: true
+            });
+        });
+
+        //2016.09.02 zxc 隐藏内容
+        $('.hide-cont').each(function () {
+            if ($.trim($(this).html()) == '') {
+                $(this).parent().hide();
+            }
+        });
+        if ($('.system-bannerbox').find('li').length < 1) {
+            $('.system-bannerbox').parents('.hide-detail').hide();
+        }
+
+    })
+</script>
+
+</body>
+</html>
+

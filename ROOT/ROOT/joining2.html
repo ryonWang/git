@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+ <div id="header" ></div>
+
+<!-- header end -->
+    <div class="inner-banner">
+        
+    <img src="upload/cimg76.jpg" alt="加盟合作banner" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg73.png" alt="" /></h2>
+    <div class="graybg pb70">
+        <div class="inner-web">
+            <div class="second-menu"><a id="anowid57" href="Joining/Agents.html">代理商及合作伙伴</a><a id="anowid58" href="Joining/Commercial.html">商用密码行业协会</a></div>
+            <div class="crumbs-box clearfix">
+                <span class="current">商用密码行业协会</span>
+                <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="Joining/Agents.html">加盟合作 </a>&gt; <a href="javascript:;" class="on">商用密码行业协会</a></div>
+            </div>
+            <div class="join-cont pb78">
+                <div class="cont">
+                    <div class="tac-pic pb40"><img title="6360807824932278029218248.png" alt="6360807824932278029218248.png" src="upload/ueditor/image/20160918/6360981474089850652075817.png">​</div><p class="single-text pb24">深圳市商用密码行业协会于2013年3月正式由深圳市民政局批准成立登记，是由深圳市从事密码学研究、密码产品生产、销售及其他相关业务的单位和组织自愿组成的非营利性专业性社会团体。协会业务主管部门为深圳市密码管理局。</p><div class="condition"><p class="title">一、业务范围</p><p>1、宣传贯彻党和国家有关的方针、政策、法律和法规；</p><p>2、组织举办各种密码与信息安全相关的学术报告会、展览会；</p><p>3、协助政府参与制订行业标准；</p><p>4、组织和推动会员单位交流管理和改革的经验；</p><p>5、为会员提供技术咨询、技术服务和培训服务，推动会员间的经济、技术交流与合作；</p><p>6、设立并管理技术开发基金；</p><p>7、组织编印协会内部交流刊物和简报；</p><p>8、组织会员积极参与其他地区相关组织的交往与交流；</p><p>9、接受政府委托的符合本会宗旨的其他事项。</p></div><div class="condition"><p class="title">二、会员权利</p><p>1、本协会的选举权、被选举权和表决权；</p><p>2、对本协会工作的批评建议权和监督权；</p><p>3、参加本协会活动的权利，获得本协会服务的优先权；</p><p>4、优先、优惠在本协会组织的活动和出版物上宣传会员及单位；</p><p>5、入会自愿，退会自由。</p></div><div class="condition"><p class="title">三、入会须知</p><p>申请加入本协会的会员，必须具备下列条件：</p><p>1、拥护本协会的章程；</p><p>2、自愿加入本协会并积极承担和履行会员各项责任与义务；</p><p>3、从事密码学研究、密码产品生产、销售以及其他相关业务的单位和组织；</p><p>4、在协会的业务领域内有一定的影响。</p></div>
+                </div>
+                <div class="message-box">
+                    <form>
+                    <ul class="message-list clearfix">
+                       <li class="must">
+                            <p class="tip">您的称呼：</p>
+                            <label>
+                                <input class="text" name="Title" type="text" value=""></label>
+                        </li>
+                        <li>
+                            <p class="tip">您的电话：</p>
+                            <label>
+                                <input class="text" name="Phone" type="text" value=""></label>
+                        </li>
+                        <li class="must">
+                            <p class="tip">您的Email：</p>
+                            <label>
+                                <input class="text" name="Email" type="text" value=""></label>
+                        </li>
+                        <li>
+                            <p class="tip">您的地址：</p>
+                            <label>
+                                <input class="text" name="Fax" type="text" value=""></label>
+                        </li>
+                        <li class="textarea-box must">
+                            <p class="tip">留言内容：</p>
+                            <label>
+                                <textarea name="Content"></textarea></label>
+                        </li>
+                        <li class="last">
+                            <label>
+                                <input class="btn submit submitBtn" type="button" value="提交"></label>
+                            <label>
+                                <input class="btn reset" type="reset" value="重置"></label>
+                        </li>
+                    </ul>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+</body>
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+
+
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <script type="text/javascript" src="ajax/Feedback.ashx"></script>
+    <script>
+        $(function () {
+            $("#anowid58").addClass("cur");
+            $(".submitBtn").click(function () {
+                var title = $("[name='Title']").val();
+                if (title == "") {
+                    layer.msg("请填写您的称呼！", 1, 9);
+                    return false;
+                }
+
+
+                var phone = $("[name='Phone']").val();
+                if (phone == "") {
+                    layer.msg("请填写您的电话！", 1, 9);
+                    return false;
+                }
+
+                var email = $("[name='Email']").val();
+                if (email == "") {
+                    layer.msg("请填写您的Email！", 1, 9);
+                    return false;
+                }
+                else {
+                    //对电子邮件的验证
+                    var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                    if (!myreg.test(email)) {
+                        layer.msg("请填写正确的Email！", 1, 9);
+                        return false;
+                    }
+                }
+
+                var fax = $("[name='Fax']").val();
+                if (fax == "") {
+                    layer.msg("请填写您的地址！", 1, 9);
+                    return false;
+                }
+
+
+                var content = $("[name='Content']").val();
+                if (content == "") {
+                    layer.msg("请填写留言内容！", 1, 9);
+                    return false;
+                }
+
+                var model = {};
+                model.Title = title;
+                model.Email = email;
+                model.Phone = phone;
+                model.Content = content;
+                model.Fax = fax;
+                model.ClassId = 60;
+                model.IsLock = 1;
+                model.Ver = "cn";
+                model.SortId = 100;
+                Feedback.Add(model, function (res) {
+                    if (res.value > 0) {
+                        layer.msg("您的留言已经提交成功！", 1, 9);
+                        setTimeout("window.location.href='Joining/Commercial.html'", 1000);
+                    } else {
+                        layer.msg("系统异常，请稍后再试！", 1, 9);
+                        return false;
+                    }
+                })
+
+            });
+        })
+    </script>
+</html>
+

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+<div id="header" ></div>
+
+<!-- header end -->
+    <div class="inner-banner">
+        
+    <img src="upload/cimg124.jpg" alt="联系我们BANNER" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg80.png" alt="" /></h2>
+    <div class="graybg pb70">
+        <div class="web">
+            <div class="second-menu"><a id="anowid10" href="contact.html">联系方式</a><a id="anowid8" href="suggestions.html"> 投诉建议</a></div>
+            <div class="crumbs-box clearfix">
+                <span class="current"> 投诉建议</span>
+                <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="contact.html">联系我们</a> &gt; <a href="javascript:;" class="on"> 投诉建议</a></div>
+            </div>
+            <div class="single-cont">
+                <h2 class="proposal-title">尊敬的客户朋友，请您将您的意见建议通过下表反馈给我们，我们会尽快与您联系。<span class="bluefont">
+  
+ （以下 * 均为必填项）</span>
+
+</h2>
+                <div class="message-box proposal-box">
+                    <form>
+                        <ul class="message-list proposal-list clearfix">
+                            <li class="must">
+                                <p class="tip">您的称呼：</p>
+                                <label>
+                                    <input class="text" name="Title" type="text" value=""></label>
+                            </li>
+                            <li>
+                                <p class="tip">您的电话：</p>
+                                <label>
+                                    <input class="text" name="Phone" type="text" value=""></label>
+                            </li>
+                            <li class="must">
+                                <p class="tip">您的Email：</p>
+                                <label>
+                                    <input class="text" name="Email" type="text" value=""></label>
+                            </li>
+                            <li>
+                                <p class="tip">您的地址：</p>
+                                <label>
+                                    <input class="text" name="Fax" type="text" value=""></label>
+                            </li>
+                            <li class="textarea-box must">
+                                <p class="tip">留言内容：</p>
+                                <label>
+                                    <textarea name="Content"></textarea></label>
+                            </li>
+                            <li class="last">
+                                <label>
+                                    <input class="btn submit submitBtn" type="button" value="提交"></label>
+                                <label>
+                                    <input class="btn reset" type="reset" value="重置"></label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <script type="text/javascript" src="ajax/Feedback.ashx"></script>
+<script>
+    $(function () {
+        $("#anowid8").addClass("cur");
+        $(".submitBtn").click(function () {
+            var title = $("[name='Title']").val();
+            if (title == "") {
+                layer.msg("请填写您的称呼！", 1, 9);
+                return false;
+            }
+
+
+            var phone = $("[name='Phone']").val();
+            if (phone == "") {
+                layer.msg("请填写您的电话！", 1, 9);
+                return false;
+            }
+
+            var email = $("[name='Email']").val();
+            if (email == "") {
+                layer.msg("请填写您的Email！", 1, 9);
+                return false;
+            }
+            else {
+                //对电子邮件的验证
+                var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                if (!myreg.test(email)) {
+                    layer.msg("请填写正确的Email！", 1, 9);
+                    return false;
+                }
+            }
+
+            var fax = $("[name='Fax']").val();
+            if (fax == "") {
+                layer.msg("请填写您的地址！", 1, 9);
+                return false;
+            }
+
+
+            var content = $("[name='Content']").val();
+            if (content == "") {
+                layer.msg("请填写留言内容！", 1, 9);
+                return false;
+            }
+
+            var model = {};
+            model.Title = title;
+            model.Email = email;
+            model.Phone = phone;
+            model.Content = content;
+            model.Fax = fax;
+            model.ClassId = 70;
+            model.IsLock = 1;
+            model.Ver = "cn";
+            model.SortId = 100;
+            Feedback.Add(model, function (res) {
+                if (res.value > 0) {
+                    layer.msg("您的投诉建议已经提交成功！", 1, 9);
+                    setTimeout("window.location.href='contact.html'", 1000);
+                } else {
+                    layer.msg("系统异常，请稍后再试！", 1, 9);
+                    return false;
+                }
+            })
+
+        });
+    })
+</script>
+
+</body>
+</html>
+

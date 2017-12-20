@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+<div id="header" ></div>
+
+<!-- header end -->
+    <div class="inner-banner">
+        
+    <img src="upload/cimg26.jpg" alt="公司概况" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg66.png" alt="" /></h2>
+    <div class="graybg pb70">
+        <div class="inner-web">
+            <div class="second-menu">
+                <a id="aparentid22" href="company.html">公司介绍</a><a id="aparentid23" href="tech.html">创新技术</a><a id="aparentid24" href="philosophy.html">企业文化</a>
+            </div>
+            <div class="third-menu02" style="display: none;"><a id="a36" href="philosophy.html">企业理念</a> | <a id="a37" href="vision.html">愿景与使命</a> | <a id="a38" href="coreValues.html">核心价值观</a> | <a id="a39" href="talent.html">人才理念</a> | </div>
+            <div class="crumbs-box clearfix">
+                <span class="current">愿景与使命</span>
+                <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="company.html">公司概况</a> &gt; <a href="philosophy.html">企业文化</a> &gt; <a href="vision.html" class="on">愿景与使命</a></div>
+            </div>
+            <div class="culture">
+                <h2 class="company-name">愿景与使命</h2>
+                
+                <dl class="culture-box clearfix">
+                    <dt>
+                        <img src="upload/Company/Profile/cimg65.jpg" alt="企业使命" /></dt>
+                    <dd>
+                        <h3 class="title">企业使命</h3>
+                        <p>让安全走进千家万户！</p>
+                    </dd>
+                </dl>
+                
+                <dl class="culture-box clearfix">
+                    <dt>
+                        <img src="upload/Company/Profile/cimg66.jpg" alt="公司愿景" /></dt>
+                    <dd>
+                        <h3 class="title">公司愿景</h3>
+                        <p>中国智慧安监的领航者</p>
+                    </dd>
+                </dl>
+                
+            </div>
+        </div>
+    </div>
+    
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <!--企业理念-->
+<script src="webjs/myscroll.js"></script>
+<script>
+    $(function () {
+        $("#aparentid24").addClass("cur");
+        $("#a37").addClass("cur");
+        var shtml = $(".third-menu02").html();
+        shtml = shtml.substring(0, shtml.length - 2);
+        $(".third-menu02").html(shtml);
+        $(".third-menu02").show();
+    })
+</script>
+
+</body>
+</html>
+

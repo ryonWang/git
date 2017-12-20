@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+<div id="header" ></div>
+
+<!-- header end -->
+    <div class="inner-banner">
+        
+    <img src="upload/cimg26.jpg" alt="公司概况" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg66.png" alt="" /></h2>
+    <div class="graybg pb70">
+  <div class="web">
+    <div class="second-menu"><a id="aparentid22" href="company.html">公司介绍</a><a id="aparentid23" href="tech.html">创新技术</a><a id="aparentid24" href="philosophy.html">企业文化</a></div>
+    <div class="third-menu02" style="display:none;"><a id="a25" href="company.html">公司简介</a> | <a id="a26" href="organization.html">组织架构</a> | <a id="a27" href="development.html">发展历程</a> | <a id="a28" href="qualification.html">公司资质</a> | <a id="a29" href="environment.html">办公环境</a> | </div>
+    <div class="crumbs-box clearfix">
+      <span class="current">公司资质</span>
+      <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="company.html">公司概况</a> &gt; <a href="company.html">公司介绍</a> &gt; <a href="javascript:;" class="on">公司资质</a></div>
+    </div>
+    <!--3d 相册-->
+    <div id="honor" class="jcImgScroll">
+        <ul>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811434123.png" title="1"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/cimg40.jpg" title="国家火炬计划重点高新技术企业"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811074977.png" title="矿用产品安全标志证书"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811074154.png" title="国家高新技术企业"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/ISO.png" title="企业ISO认证"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811074547.png" title="商业密码产品定点生产单位"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016112217575565.jpg" title="软件企业认定证书"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811075702.png" title="深圳市创新型中小微企业 "></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811075486.png" title="深圳市智慧城管顾问"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016112217462639.jpg" title="信息系统集成资质"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811074772.png" title="国家火炬计划项目产业化"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811075915.png" title="广东省著名商标"></a></li>
+            
+            <li><a href="javascript:;" path="upload/Company/Profile/2016091811073897.png" title="广东省诚信示范企业"></a></li>
+            
+        </ul>
+        </div>
+        <p class="newhonorTit"></p>
+        <!--3d 相册 over-->
+  </div>
+</div>
+
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+
+<!--公司资质-->
+<script src="webjs/jQuery-easing.js"></script>
+<script src="webjs/jQuery-jcImgScroll.js"></script>
+<script>
+    $(function () {
+        var _count = $('.jcImgScroll').find('li').length;
+        if (_count == 0) { return false; }
+        if (_count >= 5) {
+            _count = 5;
+        } else if (_count == 1 || _count == 3) {
+            _count = _count;
+        } else if (_count == 2 || _count == 4) {
+            _count = _count - 1;
+        }
+        //console.log(_count);
+        $("#honor").jcImgScroll({
+            speed: 800,
+            width: 557,
+            height: 415,
+            arrow: {
+                width: 54,
+                height: 415,
+                x: 300,
+                y: 0
+            },
+            count: _count,
+            offsetX: 130,
+            title: false
+        });
+
+        $("#aparentid22").addClass("cur");
+        $("#a28").addClass("cur");
+        var shtml = $(".third-menu02").html();
+        shtml = shtml.substring(0, shtml.length - 2);
+        $(".third-menu02").html(shtml);
+        $(".third-menu02").show();
+
+        $('.newhonorTit').html($('.jcImgScroll').find('.select a').attr('title'));
+    });
+</script>
+
+</body>
+</html>
+

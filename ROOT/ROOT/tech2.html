@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="import" href="head.html" id="tmp" />
+</head>
+<body>
+<div id="header" ></div>
+
+<!-- header end -->
+
+    <div class="inner-banner">
+        
+    <img src="upload/cimg26.jpg" alt="公司概况" />
+        
+    </div>
+    <h2 class="inner-publictitle">
+        <img src="webimages/cimg66.png" alt="" /></h2>
+    <div class="graybg pb70">
+  <div class="web">
+    <div class="second-menu"><a id="aparentid22" href="#">公司介绍</a><a id="aparentid23" href="#">创新技术</a><a id="aparentid24" href="#">企业文化</a></div>
+    <div class="third-menu03" style="display:none;"><a id="a46" href="#">智能物联网技术</a> | <a id="a47" href="#">可信计算技术</a> | <a id="a48" href="#">互联网+大数据技术</a> | <a id="a49" href="#">事故预警预报技术</a> | <a id="a50" href="#">智能视频分析技术</a> | <a id="a51" href="#">跨平台数据对接与兼容层技术</a> | </div>
+    <div class="crumbs-box clearfix">
+      <span class="current">可信计算技术</span>
+      <div class="crumbs"><a href="index.html" class="home">首页</a> &gt; <a href="#">公司概况</a> &gt; <a href="#">创新技术</a> &gt; <a href="javascript:;" class="on">可信计算技术</a></div>
+    </div>
+    <div class="single-cont">
+      <div class="technology-box">
+        <h2 class="company-name">
+ 可信计算技术</h2><p class="tac-pic pb32"> <img src="upload/ueditor/image/20160827/6360790642721427714320626.jpg" alt="cimg53.jpg" title="cimg53.jpg"></p><p class="technology-text pb24">
+ 可信计算（Trusted Computing）是一种通过硬件手段保证平台安全性的技术，可信计算能够提供给系统可靠性、可用性和安全性。</p><p class="technology-text pb24">
+ 可信计算基本思想是在计算机硬件平台上引入安全芯片，着重提供安全核心的密码学功能，通过该安全芯片提供的安全特性来提高终端系统的安全性。</p><p class="technology-text pb24">
+ 可信计算在国内外都有应用。国外以可信平台模块（TPM）为信任根，而国内将可信密码模块（TCM）作为平台的信任根。公司开发的可信计算产品是以TCM为信任根，将可信逐次传递给Uboot驱动和Linux操作系统，从而形成可信链，然后进行TCS、接口和应用开发，最终实现整个产品的安全可信。</p>
+      </div>
+      <div class="orso-case">
+        <h2 class="orso-casetitle"><span>应用案例</span></h2>
+        <div class="orso-casebox">
+          <ul class="orso-caselist clearfix">
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--二维码弹窗-->
+<div id="footer"></div>
+
+<!-- footer end -->
+
+<!--公共-->
+<script src="webjs/jquery.js"></script>
+
+<!--没什么特殊情况放最后-->
+<script src="webjs/layout.js"></script>
+    <script>
+
+        $(function () {
+            $("#aparentid23").addClass("cur");
+            $("#a47").addClass("cur");
+            var shtml = $(".third-menu03").html();
+            shtml = shtml.substring(0, shtml.length - 2);
+            $(".third-menu03").html(shtml);
+            $(".third-menu03 a:last").addClass("sbsj");
+            $(".third-menu03").show();
+            if ($(".orso-caselist li").length == 0) {
+                $(".orso-case").hide();
+            }
+        })
+    </script>
+
+</body>	
+</html>
+
